@@ -7,11 +7,11 @@
     <title>User Create</title>
   </head>
   <body>
-    <form method="POST">
+    <form method="POST" action="/user/created/">
       {% csrf_token %}
-      <input type="text" placeholder="Kullanıcı adı" id="uname" />
-      <input type="password" placeholder="Şifre" id="pass" />
-      <input type="submit" id="create-btn" />
+      <input type="text" placeholder="Kullanıcı adı" name="uname" />
+      <input type="password" placeholder="Şifre" name="pass" />
+      <button type="submit">Kaydol</button>
     </form>
   </body>
 </html>
