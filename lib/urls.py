@@ -17,9 +17,10 @@ Class-based views
 
 from django.contrib import admin
 from django.urls import path, include
-
+from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('/<str:uname>/<str:passwd>/', home),
     path('user/', include("users.urls"))
 ]
